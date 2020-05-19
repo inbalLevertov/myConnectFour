@@ -1,0 +1,17 @@
+
+<!-- <div id="projects"> -->
+    {{#projects}}
+    <!-- <div class="project"> -->
+        <a
+        {{#if (highlight directory) }} class="on"
+        {{/if}}
+        href="/projects/{{directory}}"><p>{{title}}</p>
+
+        {{#if ../ welcome }}
+ <img src="/{{directory}}/screenshot.jpg" alt="screenshot" >
+        {{/if}}
+        </a>
+
+    <!-- </div> -->
+    {{/projects}}
+<!-- </div> -->

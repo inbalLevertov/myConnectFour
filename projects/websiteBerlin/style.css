@@ -1,0 +1,296 @@
+* {
+    font-family: "Georgia";
+    box-sizing: border-box;
+}
+
+header {
+    height: 100px;
+    position: relative;
+}
+
+#sprint {
+    float: left;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+
+#men {
+    float: right;
+    height: 50px;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+.main_page {
+    position: relative;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#reichstag {
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+h1 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#button {
+    position: absolute;
+    */width: 300px;
+    height: 50px;
+    color: #ff8000;
+    background-color: gold;
+    border-color: #ff8000;
+    border-radius: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+}
+
+.bottom {
+    background-color: #cccccc;
+    margin-top: -5px;
+    height: 400px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+p {
+    width: 320px;
+    height: 100px;
+    float: right;
+    font-size: 18px;
+}
+
+.box {
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.left {
+    margin-left: 150px;
+    float: left;
+}
+
+.right {
+    margin-right: 150px;
+    float: right;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    height: 60px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 667px) {
+    body {
+        margin: 0px;
+        width: 100%;
+    }
+    #menu {
+        right: 30px;
+    }
+
+    #sprint {
+        left: 30px;
+    }
+
+    h1 {
+        font-size: 25px;
+        top: 25%;
+        transform: translate(-50%, -25%);
+    }
+
+    #button {
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+        top: 70%;
+        transform: translate(-50%, -70%);
+    }
+    .box {
+        width: 100%;
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    p {
+        width: 55%;
+        float: left;
+        margin-left: 40px;
+    }
+
+    .icon {
+        margin-top: 25px;
+    }
+
+    .bottom {
+        height: 650px;
+        margin-top: 0px;
+    }
+
+    .main_page {
+        /* margin-top: 20px; */
+    }
+
+    footer p {
+        width: 100%;
+    }
+}
+/* HAMBURGER MENU */
+/* the hamburger menu is the container and we can make it display none for
+it not to be shown when we open the page (and everything in it wont be displayed) */
+/* and together with the hamburger-menu.on we can bring it back just by adding this class in JS */
+/* but the best way is to use visibility hidden and visible bacaude tran works only on displayed elements*/
+
+img[alt="men"] {
+    cursor: grab;
+}
+#hamburger-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: none; */
+    visibility: hidden;
+}
+
+#hamburger-menu.on {
+    /* display: block; */
+    visibility: visible;
+}
+
+#hamburger-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: red;
+    opacity: 0.5;
+}
+
+#menu {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    max-width: 400px;
+    transform: translateX(100%); /*100 percent of its own width */
+    /* overflow: hidden; */
+}
+.on #menu {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: translateX(0);
+    /* overflow: hidden; */
+}
+.on #menu .off {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: translateX(-100%);
+}
+
+#menu a {
+    font-size: 22px;
+    /* display: block; */
+}
+#menu dd {
+    margin-bottom: 10px;
+}
+
+.x {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: gray;
+    font-size: 22px;
+}
+
+#modal-dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+#modal-dialog.onJQ {
+    visibility: visible;
+}
+
+#modal-dialog::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#popup {
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-top: 30px;
+    left: 25%;
+    top: 25%;
+    height: 50%;
+    width: 50%;
+    max-width: 600px;
+}
+
+h2 {
+    width: 100%;
+    height: 10px'
+}
+
+.popup-text {
+    width: 100%;
+    height: 10px;
+}

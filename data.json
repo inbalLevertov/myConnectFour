@@ -1,0 +1,27 @@
+[
+    {
+        "title": "github",
+        "directory": "github-api",
+        "description": "this is the github API project"
+    },
+    {
+        "title": "Connect Four",
+        "directory": "connect-four",
+        "description": "this is the connect-four project"
+    },
+    {
+        "title": "panes",
+        "directory": "resizable-panes",
+        "description": "this is the resizable panes project"
+    },
+    {
+        "title": "spotify",
+        "directory": "spotify-search",
+        "description": "this is the spotify search project"
+    },
+    {
+        "title": "Berlin website",
+        "directory": "websiteBerlin",
+        "description": "this is the website Berlin project"
+    }
+]

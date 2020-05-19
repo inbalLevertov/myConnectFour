@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="side">
+        {{>list}}
+    </div>
+
+    <div class="des">
+    <p class="text"> {{selectedProject.title}}</p>
+    <p class="text">{{selectedProject.description}}</p>
+    <a href="/{{selectedProject.directory}}" target="_blank"> <img src="/{{selectedProject.directory}}/screenshot.jpg" alt="screenshot" ></a>
+    <a href="/{{selectedProject.directory}}" target="_blank"> <button>to the project</button></a>
+
+    </div>
+
+</div>

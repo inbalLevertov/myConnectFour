@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>GitHub API</title>
+    </head>
+    <body>
+
+        <input type="text" name="username" placeholder="enter your github username">
+        <input type="password" name="password" placeholder="enter your github password">
+        <input type="text" name="user-to-search" placeholder="enter your github user to search for">
+        <button id='go' type="button" name="button">go</button>
+
+
+<div class="searchedUser"></div>
+
+<script id="users" type="text/x-handlebars-template">
+    {{#resultsData}}
+    {{#owner}}
+    {{#avatar_url}}
+    <div class="row">
+
+    <img src="{{.}}">
+    {{/avatar_url}}
+{{/owner}}
+{{#full_name}}
+<button class="repos">{{.}}</button>
+{{/full_name}}
+
+
+
+</div>
+
+
+    {{/resultsData}}
+
+</script>
+<div class="commits"></div>
+
+<script id="comments" type="text/x-handlebars-template">
+    <ul>
+{{#messagesArray}}
+<li class="messages">{{.}}</li>
+{{/messagesArray}}
+</ul>
+
+
+</script>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+
+    </body>
+
+
+
+</html>

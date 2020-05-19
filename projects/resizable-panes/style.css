@@ -1,0 +1,37 @@
+* {
+    background-color: pink;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+img {
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+}
+
+#container {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+#bottom-image {
+    position: absolute;
+}
+
+#top-image {
+    position: absolute;
+    overflow: hidden;
+    /* visibility: hidden; */
+}
+
+#slider {
+    position: absolute;
+    height: 400px;
+    width: 10px;
+    left: 99%;
+    background-color: red;
+}
