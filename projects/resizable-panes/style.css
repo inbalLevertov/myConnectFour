@@ -1,19 +1,31 @@
 * {
-    background-color: pink;
     box-sizing: border-box;
     user-select: none;
+    font-family: "Metal Mania", cursive;
+}
+
+#text {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 img {
-    height: 400px;
-    width: 600px;
+    height: 500px;
+    width: 700px;
     object-fit: cover;
 }
 
+/* #out {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+} */
+
 #container {
     position: relative;
-    height: 400px;
-    width: 600px;
+    height: 500px;
+    width: 700px;
     border: 2px solid black;
     overflow: hidden;
 }
@@ -30,8 +42,8 @@ img {
 
 #slider {
     position: absolute;
-    height: 400px;
-    width: 10px;
-    left: 99%;
+    height: 500px;
+    width: 15px;
+    left: 98%;
     background-color: red;
 }

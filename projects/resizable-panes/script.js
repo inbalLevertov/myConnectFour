@@ -1,8 +1,6 @@
 var slider = $("#slider");
-console.log(slider);
 var container = $("#container");
 var topImage = $("#top-image");
-var bottomImage = $("#bottom-image");
 
 slider.mousedown(function() {
     container.mousemove(function(e) {
@@ -10,7 +8,7 @@ slider.mousedown(function() {
         var left = container.offset().left;
         if (x < container.width() + left + slider.width()) {
             slider.css({
-                left: x - 10 + "px"
+                left: x - 15 + "px"
             });
             topImage.css({
                 width: x
@@ -18,11 +16,3 @@ slider.mousedown(function() {
         }
     });
 });
-
-//     var x = e.clientX;
-//     var left = $(e.currentTarget).offset().left;
-//     console.log(x);
-//     slider.css({
-//         left: left
-//     });
-// });
