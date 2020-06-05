@@ -45,17 +45,6 @@
                 break;
             }
         }
-        // if (c === 0) {
-        //     color.eq(c).css({
-        //         left: 450 + "px",
-        //         top: 20 + "px"
-        //     });
-        // } else {
-        //     color.eq(c).css({
-        //         left: 770 + "px",
-        //         top: 20 + "px"
-        //     });
-        // }
 
         var slotsInRow = $(".row" + i);
 

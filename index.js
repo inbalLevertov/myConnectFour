@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
             exclaim(text) {
                 return text + "!!!!";
             },
-            highlight(x) {
+            highlight() {
                 return;
                 // console.log("it worked ", x);
             }
