@@ -24,10 +24,13 @@
     var password;
     var userToSearch;
     var results = {};
-    var messages = {};
+    // var messages = {};
     var repo;
+    alert(
+        "Hello! Due to some changes in GitHub's basic authentication regulation, please ignore for now the user name and password fields while searching a gitHub user"
+    );
 
-    $("#go").on("click", function(e) {
+    $("#go").on("click", function() {
         username = $('input[name="username"]').val();
         password = $('input[name="password"]').val();
         userToSearch = $('input[name="user-to-search"]').val();
